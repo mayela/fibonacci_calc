@@ -28,7 +28,9 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Celery configurations
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
 # Application definition
 
 INSTALLED_APPS = [
